@@ -15,6 +15,11 @@ public class DataHandler {
             sb.append(String.format("(%d) %s ", count, item));
         }
 
-        return sb.toString().trim(); // Return molding row
+        // delete the last extra space
+        if (sb.length() > 0) {
+            sb.deleteCharAt(sb.length() - 1);
+        }
+
+        return sb.toString();
     }
 }
